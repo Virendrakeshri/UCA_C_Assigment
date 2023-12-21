@@ -2,13 +2,13 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
- typedef struct queue{
+ typedef struct {
     int front;
      int rear;
     int *arr;
     int size;
      int count;
-}que;
+};
 void insert(que *q1,int data){
     if(q1->count==5){
         printf("Queue Overflow");
@@ -75,7 +75,7 @@ void dis(que* q1){
 }
 
 int main() {
-    que *q1=(que*) malloc(sizeof(que));
+    struct queue *q1=(que*) malloc(sizeof(que));
    q1->arr=malloc(5*(sizeof(int)));
     q1->size=5;
     q1->rear=0;
